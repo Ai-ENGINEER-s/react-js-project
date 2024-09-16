@@ -1,4 +1,4 @@
-# Nom du Projet
+# React Projects 
 
 Une courte description de votre projet, expliquant ce qu'il fait et pourquoi il existe.
 
