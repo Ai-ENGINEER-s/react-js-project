@@ -95,6 +95,5 @@ Ce projet est sous licence MIT - voir le fichier [LICENSE](LICENSE) pour plus d'
 
 Pour toute question ou suggestion, n'hésitez pas à me contacter :
 
-- Email : votre.email@exemple.com
-- GitHub : [votreutilisateur](https://github.com/votreutilisateur)
-- Twitter : [@votrecompte](https://twitter.com/votrecompte)
+- Email : barrysanoussa19@gmail.com
+- GitHub : [votreutilisateur](https://github.com/Ai-ENGINEER-s)
