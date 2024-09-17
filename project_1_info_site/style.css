@@ -7,25 +7,21 @@ body {
 
 }
 
-#container{
+
+#navBar {
 
     position: flex;
-   align-items:center;
-}
-
-#navBar{
-
-position: flex;
-justify-content: space-between;
+    justify-content: space-between;
 }
 
 h1 {
     font-family: 'Arial', sans-serif;
     line-height: 1.5;
-  }
+}
+
+button:hover {
+
+    transition: background-color 0.5s ease;
 
 
-
-
-
-  
+}
