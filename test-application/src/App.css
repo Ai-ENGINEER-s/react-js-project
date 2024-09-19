@@ -1,0 +1,27 @@
+.button  {
+
+  background-color: blue ;
+
+
+  border-radius: 10px;
+  padding: 10px;
+
+  color: white ;
+margin-left: 30%;
+
+
+}
+
+.product{
+
+
+text-align: center;
+list-style-type:none ;
+
+font-weight: bold;
+}
+
+.product li {
+
+  color: blue ;
+}
