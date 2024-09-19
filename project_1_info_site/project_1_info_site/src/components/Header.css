@@ -1,0 +1,28 @@
+
+
+.header {
+
+    background-color:darkgray;
+
+    padding:15px;
+    color: white;
+
+    text-align: center;
+}
+
+.header h1 {
+
+    margin: 0;
+
+    font-size: 2.5rem;
+}
+
+.image{
+
+    width: 20%;
+    border-radius: 30px;
+    background-color: brown;
+    margin: 10px;
+
+
+}
