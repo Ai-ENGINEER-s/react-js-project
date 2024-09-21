@@ -1,27 +1,24 @@
-.button  {
-
-  background-color: blue ;
-
-
-  border-radius: 10px;
-  padding: 10px;
-
-  color: white ;
-margin-left: 30%;
-
-
-}
-
 .product{
-
-
 text-align: center;
 list-style-type:none ;
-
 font-weight: bold;
 }
 
 .product li {
+  color:rgb(58, 39, 20);
+}
 
-  color: blue ;
+
+.image{
+
+  width: 100px;
+  height: 75px;
+}
+
+.container{
+
+  background-color:antiquewhite ;
+
+  padding: 10px;
+  margin: 10px;
 }
