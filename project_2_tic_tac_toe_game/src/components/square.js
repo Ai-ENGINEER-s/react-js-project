@@ -12,7 +12,7 @@ function handleClick(){
     setValue(value ==='X' ? 'O' : 'X')
 }
     
-    return <button className={className} onClick={handleClick}>{props.name}
+return <button className={className} onClick={handleClick}>{props.name}
     {value}
     </button>
   }

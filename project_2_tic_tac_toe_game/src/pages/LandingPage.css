@@ -27,7 +27,8 @@ color: rgb(103, 95, 95);
     -webkit-user-select: none; /* Pour Safari et iOS */
     -moz-user-select: none;    /* Pour Firefox */
     -ms-user-select: none;     /* Pour Internet Explorer/Edge */
-    user-select: none;  
+    user-select: none; 
+    border-radius: 10px; 
  
     
     /* Pour que l'image remplisse bien le conteneur */
