@@ -4,8 +4,7 @@ import '../pages/LandingPage.css'
 
 
 
-
- function LandingPage (){
+function LandingPage (){
 
 return (
 
