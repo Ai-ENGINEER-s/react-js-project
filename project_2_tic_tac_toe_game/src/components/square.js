@@ -1,13 +1,14 @@
 import React from 'react'
 import { useState } from 'react'
+import '../components/square.css'
 
  function Square(props){
 
-const [value , setValue] = useState(null  )
+const [value , setValue] = useState(null)
 
 
 function handleClick(){
-    setValue('X')
+    setValue(value ==='X' ? 'O' : 'X')
 }
     
     return <button className='square' onClick={handleClick}>{props.name}

@@ -139,6 +139,29 @@ function LoginForm  (){
 
 // syntax de useState 
 
+// le hook useState est l'un des hooks les plus importants en React .Il te permet d'ajouter un état local a un composant foncntionnel . Avant l'introduction des hook , seul les composants de classe pouvaient avoir un état . Grace a 
+
+// syntaxe de base : 
+
+
+
+function TextInput() {
+  // Initialisation d'une variable d'état "text" avec une chaîne vide
+  const [text, setText] = useState('');
+
+  return (
+    <div>
+      <input 
+        type="text" 
+        value={text} 
+        onChange={(e) => setText(e.target.value)} 
+        placeholder="Tapez ici"
+      />
+      <p>Vous avez tapé : {text}</p>
+    </div>
+  );
+}
+
 
 
 
@@ -156,6 +179,7 @@ if (isLoggedIn){
   return (
   <div>
     {content}
+    <TextInput/>
   </div>
   )
 }
