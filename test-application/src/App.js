@@ -90,43 +90,12 @@ function Compteur() {
 
 
 
-const ThemeContext = createContext();
-
-function Composant() {
-  const theme = useContext(ThemeContext);
-
-  return (
-    <div style={{ backgroundColor: theme.backgroundColor, color: theme.color }}>
-      <p>Ceci est un composant</p>
-    </div>
-  );
-}
-
-
-
-function ComposantFonctionnel() {
-  const [theme, setTheme] = useState('light');
-
-  return (
-    <ThemeContext.Provider value={theme}>
-      <ComposantFils />
-    </ThemeContext.Provider>
-  );
-}
-
-function ComposantFils() {
-  const theme = useContext(ThemeContext);
-
-  return <div style={{ backgroundColor: theme === 'light' ? 'white' : 'black' }}>Hello, monde !</div>;
-}
 
 function App(){
 
   return (
    <div>
      <Compteur></Compteur>
-     <ComposantFils></ComposantFils>
-     <ComposantFonctionnel></ComposantFonctionnel>
    </div>
 
   )
