@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import React from 'react';
 import { useState,useEffect, useCallback, useContext, useReducer, createContext} from 'react';
-
+import { Fragment } from 'react';
 // Props dans React = > properties in React
 
 
@@ -87,62 +87,25 @@ function Compteur() {
 
 // useContext 
 
+// step by step JSX learning 
 
-function AdminPanelContent() {
-  return (
-    <div>
-      <h1>This is the content of Admin Panel</h1>
-    </div>
-  );
-}
+// inserer du code javaScript dans jsx en utilisant les calibrances {}
 
-function LoginFormContent() {
-  return (
-    <div>
-      <h1>This is the content of Login form</h1>
-    </div>
-  );
-}
 
-function AdmiPanel({ setShowContent }) {
-  return (
-    <div>
-      <button onClick={() => setShowContent('admin')}>
-        Click to see admin panel content
-      </button>
-    </div>
-  );
-}
+const element = <h1>Hello , world </h1>
 
-function LoginForm({ setShowContent }) {
-  return (
-    <div>
-      <button onClick={() => setShowContent('login')}>
-        Click to see the content of Login page
-      </button>
-    </div>
-  );
-}
+const name = "BARRY SANOUSSA"
 
-function App() {
-  const [showContent, setShowContent] = useState(null); // État pour gérer le contenu à afficher
-  const isLoggedIn = true; // Simule l'état de connexion
+const jsxCode = <h1>{name}</h1>
 
-  let content;
-  if (isLoggedIn) {
-    content = <AdmiPanel setShowContent={setShowContent} />;
-  } else {
-    content = <LoginForm setShowContent={setShowContent} />;
-  }
+
+export default function  App(){
+
 
   return (
     <div>
-      {content}
-      {/* Affiche le contenu en fonction du clic */}
-      {showContent === 'admin' && <AdminPanelContent />}
-      {showContent === 'login' && <LoginFormContent />}
+    <Compteur/>
+    <p>{jsxCode}</p>
     </div>
-  );
+  )
 }
-
-export default App;
