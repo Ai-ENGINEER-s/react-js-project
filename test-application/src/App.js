@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import { useState,useEffect} from 'react';
+import { useState,useEffect, useCallback, useContext, useReducer, createContext} from 'react';
 
 // Props dans React = > properties in React
 
@@ -49,18 +49,87 @@ import { useState,useEffect} from 'react';
 // le hook useState permet de gerer l'etat dans un composant focntionnel . il initialise une valeur  d'etat et retourne un tableau conetenant la valeur actuelle et une fonction pour la mettre a jour 
 
 
-const [something , setSomething] = useState(setSomething)
 
-function Counter(){
+// N°1 useState 
 
-  const [myConuntNumber , setMyCounteNumber] = useState(0);
+function Compteur1() {
+  const [compte, setCompte] = useState(0);
 
   return (
-
     <div>
-      Vous avez cliqué {myConuntNumber} fois 
+      <p>Compte : {compte}</p>
+      <button onClick={() => setCompte(compte + 1)}>Incrémenter</button>
+      <button onClick={()=>setCompte(compte -1 )}>décrimenter</button>
     </div>
+  );
+}
 
-    <button onClick={()=>set}></button>
+// useEffect 
+
+
+
+function Compteur() {
+  const [compte, setCompte] = useState(0);
+
+  useEffect(() => {
+    console.log('Compte mis à jour');
+  }, [compte]);
+
+  return (
+    <div>
+      <p>Compte : {compte}</p>
+      <button onClick={() => setCompte(compte + 1)}>Incrémenter</button>
+    </div>
+  );
+}
+
+
+
+// useContext 
+
+
+
+
+const ThemeContext = createContext();
+
+function Composant() {
+  const theme = useContext(ThemeContext);
+
+  return (
+    <div style={{ backgroundColor: theme.backgroundColor, color: theme.color }}>
+      <p>Ceci est un composant</p>
+    </div>
+  );
+}
+
+
+
+function ComposantFonctionnel() {
+  const [theme, setTheme] = useState('light');
+
+  return (
+    <ThemeContext.Provider value={theme}>
+      <ComposantFils />
+    </ThemeContext.Provider>
+  );
+}
+
+function ComposantFils() {
+  const theme = useContext(ThemeContext);
+
+  return <div style={{ backgroundColor: theme === 'light' ? 'white' : 'black' }}>Hello, monde !</div>;
+}
+
+function App(){
+
+  return (
+   <div>
+     <Compteur></Compteur>
+     <ComposantFils></ComposantFils>
+     <ComposantFonctionnel></ComposantFonctionnel>
+   </div>
+
   )
 }
+
+export default App 
