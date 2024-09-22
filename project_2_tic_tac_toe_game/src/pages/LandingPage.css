@@ -1,0 +1,27 @@
+.titre{
+
+text-transform: capitalize;
+text-align: center;
+color: rgb(103, 95, 95);
+
+
+}
+
+.game{
+
+    color: green;
+}
+.imageContainer{
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+    
+}
+.image{
+    width: 15%;
+    height: 20%;
+}
