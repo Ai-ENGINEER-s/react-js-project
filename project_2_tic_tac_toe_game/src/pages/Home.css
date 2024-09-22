@@ -21,8 +21,7 @@
     background-color:antiquewhite;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-
-    height: 40%;
+    height: 60%;
     margin: 20px;
     padding: 50px;
     gap: 20px;

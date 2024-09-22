@@ -1,0 +1,12 @@
+
+
+.player{
+
+    width: 20%;
+    height: 30%;
+}
+.containerScope{
+
+    display:flex;
+    justify-content: space-around;
+}

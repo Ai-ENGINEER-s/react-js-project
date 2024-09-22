@@ -34,5 +34,7 @@ color: rgb(103, 95, 95);
     /* Pour que l'image remplisse bien le conteneur */
     
      /* Donne une forme de bouteille */ 
-     /* Propriété standard pour les autres navigateurs  pointer-events: none ;*/
+     
+     /* Propriété standard pour les autres navigateurs  pointer-events: none ;
+     */
 }
