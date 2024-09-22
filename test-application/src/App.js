@@ -88,17 +88,61 @@ function Compteur() {
 // useContext 
 
 
-
-
-
-function App(){
-
+function AdminPanelContent() {
   return (
-   <div>
-     <Compteur></Compteur>
-   </div>
-
-  )
+    <div>
+      <h1>This is the content of Admin Panel</h1>
+    </div>
+  );
 }
 
-export default App 
+function LoginFormContent() {
+  return (
+    <div>
+      <h1>This is the content of Login form</h1>
+    </div>
+  );
+}
+
+function AdmiPanel({ setShowContent }) {
+  return (
+    <div>
+      <button onClick={() => setShowContent('admin')}>
+        Click to see admin panel content
+      </button>
+    </div>
+  );
+}
+
+function LoginForm({ setShowContent }) {
+  return (
+    <div>
+      <button onClick={() => setShowContent('login')}>
+        Click to see the content of Login page
+      </button>
+    </div>
+  );
+}
+
+function App() {
+  const [showContent, setShowContent] = useState(null); // État pour gérer le contenu à afficher
+  const isLoggedIn = true; // Simule l'état de connexion
+
+  let content;
+  if (isLoggedIn) {
+    content = <AdmiPanel setShowContent={setShowContent} />;
+  } else {
+    content = <LoginForm setShowContent={setShowContent} />;
+  }
+
+  return (
+    <div>
+      {content}
+      {/* Affiche le contenu en fonction du clic */}
+      {showContent === 'admin' && <AdminPanelContent />}
+      {showContent === 'login' && <LoginFormContent />}
+    </div>
+  );
+}
+
+export default App;
