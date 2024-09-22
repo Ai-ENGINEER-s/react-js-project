@@ -99,13 +99,52 @@ const name = "BARRY SANOUSSA"
 const jsxCode = <h1>{name}</h1>
 
 
-export default function  App(){
-
+function AdminPanel (){
 
   return (
-    <div>
-    <Compteur/>
-    <p>{jsxCode}</p>
-    </div>
+    <div><h1>Admin pannel content </h1></div>
+  )
+
+
+
+}
+
+function LoginForm  (){
+
+  return (
+    <div className='container'>
+      <br/>
+   <div className='containerInput'>
+   <input placeholder='your email adresse' className='input'></input>
+   <input placeholder='your password ' className='input'></input><br/><br/>
+   </div>
+
+    
+
+
+<div className='containerButton'>
+<button className='logginButton'>Loggin</button>   
+  
+  </div>   
+      
+      </div>
+  )
+
+}
+export default function  App(){
+let content ;
+
+let isLoggedIn = false  ; 
+
+if (isLoggedIn){
+  content = <AdminPanel/>
+}else{
+  content = <LoginForm/>
+}
+
+  return (
+  <div>
+    {content}
+  </div>
   )
 }

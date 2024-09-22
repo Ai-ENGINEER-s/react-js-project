@@ -1,24 +1,49 @@
-.product{
-text-align: center;
-list-style-type:none ;
-font-weight: bold;
+.input{
+
+border-radius: 5px;
+width: 150px;
+height: 30px;
+border-color: antiquewhite;
+margin: 10px;
+
+
+
 }
 
-.product li {
-  color:rgb(58, 39, 20);
-}
+.logginButton{
 
+  color: blue;
 
-.image{
+  width: 50%;
 
-  width: 100px;
-  height: 75px;
-}
-
-.container{
-
-  background-color:antiquewhite ;
-
-  padding: 10px;
   margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+
+  background-color:green;
+  color: white;
+  font-weight:bold;
+  font-size: 20px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
 }
+
+.containerInput{
+
+
+display: flex ;
+  justify-content:center;
+  
+}
+.containerButton{
+
+
+  display: flex ;
+    justify-content:center;
+    
+  }
+
+  .container{
+
+    position:center;
+  }
