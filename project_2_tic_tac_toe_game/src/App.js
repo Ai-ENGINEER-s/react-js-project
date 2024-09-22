@@ -1,29 +1,17 @@
+import React from 'react';
+
 import './App.css';
+import { Fragment } from 'react';
+import HomePage from './pages/Home';
 
 
 
-
-
-function Square(props){
-
-  return <button className='square'>{props.name}</button>
-}
 
 function App() {
   return (
-<div className='squareContainer'>
-
-
-  <Square name="0"/>
-  <Square name="1"/>
-  <Square name="1"/>
-  <Square name="1"/>
-  <Square name="0"/>
-  <Square name="0"/>
-  <Square name="1"/>
-  <Square name="0"/>
-  <Square name="0"/>
-</div>
+<Fragment>
+  <HomePage/>
+</Fragment>
   );
 }
 

@@ -30,3 +30,10 @@ gap: 20px;
 
 
 }
+
+.scopeSquareContainer{
+
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
