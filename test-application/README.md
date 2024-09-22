@@ -197,3 +197,30 @@ JSX est un élément essentiel de React qui permet d'écrire des composants visu
 ---
 
 Cela fait un fichier README complet expliquant les principes de JSX !
+
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Divise le conteneur en 3 colonnes égales */
+  gap: 10px; /* Espacement entre les éléments */
+}
+
+.item {
+  padding: 10px;
+  background-color: #f0f0f0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Permet de faire un retour à la ligne si les éléments dépassent la largeur */
+  justify-content: space-between; /* Espacer les éléments uniformément */
+}
+
+.item {
+  flex: 1 1 calc(33.33% - 10px); /* 33.33% de largeur avec un espace de 10px entre les éléments */
+  margin: 5px; /* Espacement entre les éléments */
+  box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur de l'élément */
+  padding: 10px; /* Ajoutez du padding interne si nécessaire */
+  background-color: #f0f0f0; /* Couleur de fond pour visualiser les éléments */
+}
