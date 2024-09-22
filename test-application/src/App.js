@@ -164,6 +164,26 @@ function TextInput() {
 
 
 
+function BoutonMagique(){
+
+
+const [isActive , setIsActive] = useState(false)
+const className = isActive ?  'button active' : 'button' ; 
+
+const toggleActive = ()=>{
+  setIsActive(prevState => !prevState)
+}
+
+return (
+  <div>
+    <button className={className} onClick={toggleActive}>
+      Click Me
+    </button>
+  </div>
+);
+
+}
+
 
 export default function  App(){
 let content ;
@@ -180,6 +200,7 @@ if (isLoggedIn){
   <div>
     {content}
     <TextInput/>
+    <BoutonMagique/>
   </div>
   )
 }

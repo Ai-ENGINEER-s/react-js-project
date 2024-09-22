@@ -24,4 +24,14 @@ color: rgb(103, 95, 95);
 .image{
     width: 15%;
     height: 20%;
+    -webkit-user-select: none; /* Pour Safari et iOS */
+    -moz-user-select: none;    /* Pour Firefox */
+    -ms-user-select: none;     /* Pour Internet Explorer/Edge */
+    user-select: none;  
+ 
+    
+    /* Pour que l'image remplisse bien le conteneur */
+    
+     /* Donne une forme de bouteille */ 
+     /* Propriété standard pour les autres navigateurs  pointer-events: none ;*/
 }

@@ -6,12 +6,13 @@ import '../components/square.css'
 
 const [value , setValue] = useState(null)
 
+const className = value === 'X' ? 'square x' : value === 'O' ? 'square o' : 'square';
 
 function handleClick(){
     setValue(value ==='X' ? 'O' : 'X')
 }
     
-    return <button className='square' onClick={handleClick}>{props.name}
+    return <button className={className} onClick={handleClick}>{props.name}
     {value}
     </button>
   }

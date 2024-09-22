@@ -5,9 +5,7 @@ width: 150px;
 height: 30px;
 border-color: antiquewhite;
 margin: 10px;
-
-
-
+ 
 }
 
 .logginButton{
@@ -46,4 +44,11 @@ display: flex ;
   .container{
 
     position:center;
+  }
+
+  .active{
+
+background-color: green;
+
+margin: 10px;
   }
