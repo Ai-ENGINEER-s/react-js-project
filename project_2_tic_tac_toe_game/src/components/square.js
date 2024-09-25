@@ -24,7 +24,9 @@ export default function SquareScope(){
     return (
   <div className='containerScope'>
 
- <img src={player2} className='player'/>
+<div className='player'>
+    <img src={player2} />
+    </div>
 
 <div className='scopeSquareContainer'>
             
@@ -41,7 +43,9 @@ export default function SquareScope(){
     
 </div>
  </div>
-    <img src={player1} className='player'/>
+    <div className='player'>
+    <img src={player1}/>
+    </div>
   </div>
     )
 }

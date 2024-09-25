@@ -1,12 +1,97 @@
-
-
-.player{
-
-    width: 20%;
-    height: 30%;
-}
-.containerScope{
-
-    display:flex;
-    justify-content: space-around;
-}
+/* Conteneur principal du jeu */
+.containerScope {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #c3eef1d4;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Conteneur des joueurs */
+  .player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100px;
+  }
+  
+  .player img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+  }
+  
+  /* Grille du jeu */
+  .scopeSquareContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .squareContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+  }
+  
+  /* Style des cases */
+  .square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-color:bisque;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .square:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .square.x {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .square.o {
+    color: #e74c3c;
+    font-weight: bold;
+  }
+  
+  /* Animation sur les clics */
+  .square.x, .square.o {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .squareContainer {
+      grid-template-columns: repeat(3, 80px);
+      grid-template-rows: repeat(3, 80px);
+    }
+  
+    .square {
+      font-size: 20px;
+    }
+  
+    .player img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  
