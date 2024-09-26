@@ -6,7 +6,7 @@
     width: 50px;
     height: 50px;
     margin: 5px;
-    background-color: white;
+    background-color: rgb(48, 37, 37);
     border-radius:5px;
     font-weight: bold;
     font-size: 20px;
@@ -18,7 +18,7 @@
     .squareContainer{
     
     
-    background-color:antiquewhite;
+    background-color:rgb(70, 65, 58);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     height: 60%;
