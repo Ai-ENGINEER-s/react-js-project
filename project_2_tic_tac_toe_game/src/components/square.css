@@ -59,7 +59,7 @@
   }
   
   .square:hover {
-    background-color:antiquewhite;
+    background-color:rgb(89, 89, 93);
   }
   
   .square.x {
