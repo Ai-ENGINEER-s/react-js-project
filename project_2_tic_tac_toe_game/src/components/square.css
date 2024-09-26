@@ -59,16 +59,16 @@
   }
   
   .square:hover {
-    background-color: #f0f0f0;
+    background-color:antiquewhite;
   }
   
   .square.x {
-    color: green;
+    color:coral;
     font-weight: bold;
   }
   
   .square.o {
-    color: #e74c3c;
+    color:rgb(213, 220, 232);
     font-weight: bold;
   }
   
