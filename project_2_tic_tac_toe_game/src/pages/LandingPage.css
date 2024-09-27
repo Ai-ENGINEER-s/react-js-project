@@ -8,18 +8,14 @@ color: rgb(103, 95, 95);
 }
 
 .game{
-
-    color: green;
+ color: green;
 }
 .imageContainer{
 
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-   
-    
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;  
 }
 .image{
     width: 11%;
