@@ -63,3 +63,32 @@ const planetsCopieComplete = planets.slice()
 
 
 console.log(planetsCopieComplete)
+
+
+
+
+
+
+// operateurs logiques en javaScripts 
+// en javaScript certaines valeurs sont considerées comme "falsy"
+
+// false  , 0 , null , "", undefined , NaN 
+
+// quand une op
+
+
+const a = true ; 
+
+const b = false 
+
+const result = a && b ; 
+console.log(result)
+
+
+const value1 = null; 
+const value2 = "hello";
+
+const result2 = value1 && value2
+
+
+
