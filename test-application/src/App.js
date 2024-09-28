@@ -4,71 +4,54 @@ import React from 'react';
 import { useState,useEffect, useCallback, useContext, useReducer, createContext} from 'react';
 
 
-function Square({prop}){
 
-return (
+function Square({value , onClickSquare}){
 
+  return (
 
-  <button className='square' >{prop}</button>
-)
+    <button className='squarre' onClick={onClickSquare}>{value}
 
-
+    </button>
+  )
 }
-
-
 
 
 function Board(){
 
   const [squares , setSquares] = useState(Array(9).fill(null))
 
+  
+
   function handleClick(){
 
-    const nextBoard = squares.slice()
-
-    nextBoard[0]= "X"
-    setSquares(squares)
-
+    const nextSquares = squares.slice()
+    nextSquares[0] = "X"
+  
+    setSquares(nextSquares)
   }
 
-  return (
+return (
 
-  <>
-  <div className='square-row'>
-  <Square prop ={0}/>
-  <Square/>
-  <Square/>
+  <div>
 
+    <Square value={squares[0]} onClickSquare={handleClick}/>
   </div>
+)
 
-  <div className='square-row'>
-  <Square/>
-  <Square/>
-  <Square/>
-  </div>
 
-  <div className='square-row'>
-  <Square/>
-  <Square/>
-  <Square/>
-
-  </div>
-
-  </>
-
-  )
 }
-
-
 
 function App(){
 
-  return (
-<>
-<Board></Board>
-</>
-   
-  )
+return (
+ <>
+<Board>
+
+</Board>
+ 
+ </>
+)
+
 }
 
 export default App 
