@@ -4,12 +4,12 @@ import React from 'react';
 import { useState,useEffect, useCallback, useContext, useReducer, createContext} from 'react';
 
 
-function Square({prop, onClickSquarre}){
+function Square({prop}){
 
 return (
 
 
-  <button className='square' onClick={onClickSquarre}>{prop}</button>
+  <button className='square' >{prop}</button>
 )
 
 
@@ -28,11 +28,6 @@ function Board(){
 
     nextBoard[0]= "X"
     setSquares(squares)
-    
-
-
-
-
 
   }
 
@@ -40,14 +35,14 @@ function Board(){
 
   <>
   <div className='square-row'>
-  <Square value={0} onClick={handleClick}/>
+  <Square prop ={0}/>
   <Square/>
   <Square/>
 
   </div>
 
   <div className='square-row'>
-  
+  <Square/>
   <Square/>
   <Square/>
   </div>
