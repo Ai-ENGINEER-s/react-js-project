@@ -4,86 +4,76 @@ import React from 'react';
 import { useState,useEffect, useCallback, useContext, useReducer, createContext} from 'react';
 
 
+function Square({prop, onClickSquarre}){
+
+return (
 
 
-// square component for the board
+  <button className='square' onClick={onClickSquarre}>{prop}</button>
+)
 
 
-function Square({value, onSquareClick}){
-
-
-
-
-  return (
-   <button className='square' 
-    onClick={onSquareClick}>{value}
-    
-    </button>
-   
-  )
 }
+
+
+
 
 function Board(){
 
+  const [squares , setSquares] = useState(Array(9).fill(null))
 
-const [squares , setSquares] = useState(Array(9).fill(null))
+  function handleClick(){
 
-function handleClick(i){
+    const nextBoard = squares.slice()
 
-  const nextSquares= squares.slice()
+    nextBoard[0]= "X"
+    setSquares(squares)
+    
 
-  nextSquares[i] = "X"
-  setSquares(nextSquares)
-}
 
+
+
+
+  }
 
   return (
 
   <>
+  <div className='square-row'>
+  <Square value={0} onClick={handleClick}/>
+  <Square/>
+  <Square/>
+
+  </div>
+
+  <div className='square-row'>
   
-  <div className='board-row'>
+  <Square/>
+  <Square/>
+  </div>
 
-      <Square  value={squares[0]} onSquareClick={handleClick(0)}/>
-      <Square value={squares[1]}/>
-      <Square value={squares[3]} />
-
+  <div className='square-row'>
+  <Square/>
+  <Square/>
+  <Square/>
 
   </div>
 
-  <div className='board-row'>
+  </>
 
-  <Square value={squares[4]}/>
-  <Square value={squares[5]}/>
-  <Square value={squares[6]}/>
-
-  </div>
-
-  <div className='board-row'>
-
-  <Square value={squares[7]} />
-  <Square value={squares[8]} />
-  <Square value={squares[9]}/>
-
-  </div>
-
-    </>
   )
 }
 
 
 
-
-
-
-
-export default function  App(){
+function App(){
 
   return (
-
-
-    <div>
- 
-    <Board></Board>
-    </div>
+<>
+<Board></Board>
+</>
+   
   )
 }
+
+export default App 
