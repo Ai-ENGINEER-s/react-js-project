@@ -5,18 +5,22 @@ import { useState,useEffect, useCallback, useContext, useReducer, createContext}
 
 
 
-function Square(){
 
-  const [value , setValue] = useState(null)
-
+// square component for the board
 
 
-  function handleClick(){
-      setValue('X')
-  }
+function Square({value}, onSquareClick){
+
+function onSquareClick(){
+
+const 
+
+}
+
+
 
   return (
-   <button className='square' onClick={handleClick} 
+   <button className='square' 
     >{value}
     
     </button>
@@ -26,31 +30,39 @@ function Square(){
 
 function Board(){
 
+
+const [squares , setSquares] = useState(Array(9).fill(null))
+
+
+
+
+
   return (
 
   <>
-
+  
   <div className='board-row'>
-      <Square />
-      <Square />
-      <Square />
+
+      <Square  value={squares[0]}/>
+      <Square value={squares[1]}/>
+      <Square value={squares[3]} />
 
 
   </div>
 
   <div className='board-row'>
 
-  <Square />
-  <Square />
-  <Square />
+  <Square value={squares[4]}/>
+  <Square value={squares[5]}/>
+  <Square value={squares[6]}/>
 
   </div>
 
   <div className='board-row'>
 
-  <Square />
-  <Square />
-  <Square />
+  <Square value={squares[7]} />
+  <Square value={squares[8]} />
+  <Square value={squares[9]}/>
 
   </div>
 
