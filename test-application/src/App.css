@@ -4,3 +4,10 @@
   height: 30px;
   margin: 10px;
 }
+
+.board{
+  background-color: antiquewhite;
+  margin: 50px;
+  display:grid;
+  justify-content: center;
+}
