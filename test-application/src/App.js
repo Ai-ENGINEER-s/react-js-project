@@ -53,7 +53,7 @@ if(winner){
   status = 'Next player' + (next ? 'X' : 'O') // sinon on affiche le prochain joueur 
 }
 function handleClick(i){
-  if(squares[i]) return ;
+  if(squares[i] || winner) return ;
 
   if(next){
     nextSquares[i]= "X"
@@ -70,6 +70,7 @@ function handleClick(i){
 return (
 <div className='board'>
 
+<h5>{status}</h5>
 
 <div className='square-row'>
 
