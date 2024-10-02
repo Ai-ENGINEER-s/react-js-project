@@ -144,9 +144,7 @@ const winnerPlayer = winner(squares);
 
 if(winnerPlayer){
 
-  status = winner + "a gagné"
-}else{
-  status = "personne n'a gagné ce jeux "
+  status = winnerPlayer + "a gagné"
 }
   function handleClick(i){
     if(squares[i] || winnerPlayer) return ; 
@@ -163,7 +161,7 @@ setSquares(squares)
   
 
 function winner(squares){
-  
+
 const winnerSquares = 
 [
   [0, 1, 2],
