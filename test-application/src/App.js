@@ -5,19 +5,13 @@ import { useState} from 'react';
 
 
 
-
-
-
-
-
-
-
 // function Square({value , onClickSquare}){
 
 //   return (
 // <button className='square' onClick={onClickSquare}>{value}</button>
 //   )
 // }
+
 
 
 // function calculateWinner(squares){
@@ -125,6 +119,9 @@ import { useState} from 'react';
 
 // }
 
+
+
+
 function Square({value , clickOnSquare}){
 
 return (
@@ -166,15 +163,17 @@ setSquares(squares)
   
 
 function winner(squares){
-
-const winnerSquares =   [[0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6],
+  
+const winnerSquares = 
+[
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6],
   
   ]
 
@@ -188,13 +187,10 @@ if(squares[a] && squares [a] === squares [b] && squares [b]=== squares [c]){
 
   return squares[a];
 }
-
-
   }
   return null ; 
 
 }
-
 
   return (
 <>
