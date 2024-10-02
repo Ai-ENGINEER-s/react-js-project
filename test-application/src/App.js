@@ -135,17 +135,27 @@ const [squares , setSquares] = useState(Array(9).fill(null))
 const [checkButton , setCheckButton ] = useState(true)
 
 
-let status ; 
-const winnerPlayer = winner(squares)
+let status ;
+const winnerPlayer = winner(squares); 
+
+if(winnerPlayer){
+
+  status = winner + "a gagné"
+}else{
+  status = "personne n'a gagné ce jeux "
+}
   function handleClick(i){
     if(squares[i] || winnerPlayer) return ; 
 
 squares[i] = checkButton ? "X" : "O";
 
+
+
 setCheckButton(!checkButton)
 setSquares(squares)
 
   }
+
   
 
 function winner(squares){
@@ -161,21 +171,20 @@ const winnerSquares =   [[0, 1, 2],
   
   ]
 
-
-
-  for (let i =0; i<=winnerSquares.length; i++){
-  let a , b , c; 
-  squares  = [a , b ,c ]
+  for (let i =0; i<winnerSquares.length; i++){
+  let a =  winnerSquares[i][0];
+  let b =  winnerSquares[i][1];
+  let c =  winnerSquares[i][2];
  
-  squares = winnerSquares[i]
 
-if(squares[a] && squares [a] === squares [a] && squares [b]=== squares [c]){
+if(squares[a] && squares [a] === squares [b] && squares [b]=== squares [c]){
 
-  return squares [a]
+  return squares[a];
 }
 
 
   }
+  return null ; 
 
 }
 
@@ -183,12 +192,11 @@ if(squares[a] && squares [a] === squares [a] && squares [b]=== squares [c]){
   return (
 <>
 
-<div className='board-row'>
-
-  
+<h2>{status}</h2>
+<div className='board-row'> 
 <Square value ={squares[0]} clickOnSquare={()=>handleClick(0)}/>
-    <Square value ={squares[1]} clickOnSquare={()=>handleClick(1)}/>
-    <Square value ={squares[2]} clickOnSquare={()=>handleClick(2)}/>
+<Square value ={squares[1]} clickOnSquare={()=>handleClick(1)}/>
+<Square value ={squares[2]} clickOnSquare={()=>handleClick(2)}/>
 </div>
 
 <div className='board-row'>
