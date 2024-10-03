@@ -92,3 +92,39 @@ const result2 = value1 && value2
 
 
 
+
+// comprehension de l'operateur ...
+
+let mangos = ['Apple' , 'Banana']
+
+let moreFruits = ["Orange" , "pear"]
+
+
+let allFruits = [...mangos, ...moreFruits]
+
+
+console.log(allFruits)
+
+
+let tabNumbers = [1,2]
+let moreNumbers = [...tabNumbers , 78]
+
+console.log(moreNumbers)
+
+// creer la copie d'un tableau 
+
+let originalArray = [1,5,96]
+
+let copiedArray = [...originalArray]
+
+
+console.log("orginal array "+ "\n" + originalArray + "\n" + "copied Array : " + copiedArray )
+
+
+// ajouter un element au debut du tableau 
+
+let animaux = ['cat' , 'dog']
+
+let moreAnimals = ['lion' , ...animaux]
+
+console.log("la liste des animaux : " + moreAnimals)
