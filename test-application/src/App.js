@@ -29,10 +29,10 @@ function Board(){
 
   const [checkSquare , setCheckSquare] = useState(true)
 
-  let  champion ; 
+
 
   const nextSquares = squares.slice()
-  
+  let  [champion , setChampion] = useState(null)
   
   // handleclick  function  for clicking button 
 
@@ -40,7 +40,7 @@ function Board(){
 function handleClick(i){
 
 
-const gameWinner = winner(squares)
+const gameWinner = winner(nextSquares)
 
 
 
@@ -49,11 +49,14 @@ if(nextSquares[i] || gameWinner) return ;
 
 if(gameWinner){
   champion = gameWinner + "vous avez gagné"
+}else{
+  champion ="Personne n'a gagné au jeux"
 }
 nextSquares[i] = checkSquare ? "X" : "O"
  
 setCheckSquare(!checkSquare)
 setSquares(nextSquares)
+setChampion(champion)
 
   }
 
