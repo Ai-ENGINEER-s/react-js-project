@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import './App.css'; 
 // Fonction qui calcule le gagnant
 function calculateWinner(squares) {
   const lines = [
@@ -35,6 +35,15 @@ function Square({ value, onClick }) {
 function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null)); // Etat des cases
   const [xIsNext, setXIsNext] = useState(true); // Etat pour savoir quel joueur joue
+  const [playerMove  , setPlayerMove] = useState(0)
+  const nextSquares = squares.slice(); // Copie du tableau des cases
+
+const [storicSquares , setStoricSquares] = useState(0)
+console.log("le nombre de mise a jour  : " + storicSquares)
+  
+
+console.log(playerMove)
+
 
   const winner = calculateWinner(squares); // Calcul du gagnant à chaque rendu
   let status;
@@ -45,23 +54,35 @@ function Board() {
     status = 'Next player: ' + (xIsNext ? 'X' : 'O'); // Sinon, on affiche le prochain joueur
   }
 
+  console.log("la taille nexsquare : "+ nextSquares.length)
+
+
+
   // Fonction qui se déclenche lorsqu'une case est cliquée
   function handleClick(i) {
-    const nextSquares = squares.slice(); // Copie du tableau des cases
-    if (nextSquares[i] || winner) return; // Si la case est déjà remplie ou s'il y a un gagnant, on ne fait rien
+    if (nextSquares[i] || winner) return; // Si la case est déjà remplie ou 
+    if (playerMove % 2 ===0){
+      nextSquares[i]  = "X"
+    }else {
+      nextSquares[i]  = "O"
+    }
 
     // Si c'est au tour de X, on place un X, sinon un O
-    nextSquares[i] = xIsNext ? 'X' : 'O';
     setSquares(nextSquares); // Mise à jour de l'état des cases
-
     // Alterne le joueur (si c'était X, maintenant c'est O, et vice versa)
-    setXIsNext(!xIsNext);
+    setPlayerMove(playerMove +1)
+ 
   }
+
+
+  
 
   // Affichage du plateau avec 9 cases
   return (
-    <div>
+    <div className='board'>
+      {nextSquares}
       <div className="status">{status}</div>
+      <button>{playerMove}</button>
       <div className="board-row">
         <Square value={squares[0]} onClick={() => handleClick(0)} />
         <Square value={squares[1]} onClick={() => handleClick(1)} />
