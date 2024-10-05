@@ -128,3 +128,13 @@ let animaux = ['cat' , 'dog']
 let moreAnimals = ['lion' , ...animaux]
 
 console.log("la liste des animaux : " + moreAnimals)
+
+
+
+
+
+const fruitsTictactoegame = ["pomme " , "orange" , "fraise " , "Kiki" ]
+
+const firstThreegame = fruitsTictactoegame.slice(0, 3); 
+
+console.log(firstThreegame)
