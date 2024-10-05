@@ -138,3 +138,4 @@ const fruitsTictactoegame = ["pomme " , "orange" , "fraise " , "Kiki" ]
 const firstThreegame = fruitsTictactoegame.slice(0, 3); 
 
 console.log(firstThreegame)
+
