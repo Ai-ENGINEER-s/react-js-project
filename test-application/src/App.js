@@ -33,7 +33,7 @@ function Square({ value, onClick }) {
 
 // Composant Board pour l'ensemble du plateau
 function Board() {
-  const [squares, setSquares] = useState(Array(9).fill(null)); // Etat des cases
+  const [squares, setSquares] = useState([Array(9).fill(null)]); // Etat des cases
   const [xIsNext, setXIsNext] = useState(true); // Etat pour savoir quel joueur joue
   const [playerMove  , setPlayerMove] = useState(0)
   const nextSquares = squares.slice(); // Copie du tableau des cases
@@ -80,9 +80,7 @@ console.log(playerMove)
   // Affichage du plateau avec 9 cases
   return (
     <div className='board'>
-      {squares} <br/>  {nextSquares}
-      <div className="status">{status}</div>
-      <button>{playerMove}</button>
+   
       <div className="board-row">
         <Square value={squares[0]} onClick={() => handleClick(0)} />
         <Square value={squares[1]} onClick={() => handleClick(1)} />
