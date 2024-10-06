@@ -80,7 +80,7 @@ console.log(playerMove)
   // Affichage du plateau avec 9 cases
   return (
     <div className='board'>
-      {squares} <br/> {nextSquares}
+      {squares} <br/>  {nextSquares}
       <div className="status">{status}</div>
       <button>{playerMove}</button>
       <div className="board-row">
