@@ -22,10 +22,19 @@ const boardSquares = [
 
 ]
 
+
+
 for (let i =0; i<boardSquares.length ; i++){
+for(let j=0 ; j<2 ; j++){
+
+  if(boardSquares[i][j] === boardSquares[i+1][j+1]){
+    return [j]; 
+  }else {
+    return null; 
+  }
+}
 
 
-  
 }
 
 }
