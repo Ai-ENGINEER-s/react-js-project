@@ -5,8 +5,6 @@ import './App.css';
 // square 
 
 function Square({value , onclickSquarre}){
-
-
   return (
 
     <button className='square' onClick={onclickSquarre}>{value}</button>
@@ -16,28 +14,71 @@ function Square({value , onclickSquarre}){
 
 
 
+function calculateWinner(squares){
 
+  
+
+
+
+
+
+}
 
 
 function Board(){
 
-  const [squares  , setSquares] = useState([Array(9).fill(null)])
+  const [squares  , setSquares] = useState(Array(9).fill(null))
+ const [checkBoxSquare , setCheckBoxSquare] = useState(true)
 
-  const copySquares = squares.slice()
-  function handleSquareClick(i){
 
-return   copySquares[i] ="S"
-  
+const copySquares = squares.slice()
 
-  
+function handleSquareClick(i){
+  if(squares[i]){return ;}
+ copySquares[i] = checkBoxSquare ? "X" : "O"
+
+ setSquares(copySquares) 
+ setCheckBoxSquare(!checkBoxSquare)
+
   }
 
-  setSquares(copySquares) 
+
+
 
 
   
 return (
- <Square value={squares[0]} onclickSquarre={()=>{handleSquareClick(0)}}/>
+<div>
+
+<div className='board-row'>
+<Square value={squares[0]} onclickSquarre={()=>{handleSquareClick(0)}}/>
+
+<Square value={squares[1]} onclickSquarre={()=>{handleSquareClick(1)}}/>
+
+<Square value={squares[2]} onclickSquarre={()=>{handleSquareClick(2)}}/>
+
+</div>
+
+<div className='board-row'>
+<Square value={squares[3]} onclickSquarre={()=>{handleSquareClick(3)}}/>
+
+<Square value={squares[4]} onclickSquarre={()=>{handleSquareClick(4)}}/>
+
+<Square value={squares[5]} onclickSquarre={()=>{handleSquareClick(5)}}/>
+
+</div>
+
+<div className='board-row'>
+<Square value={squares[6]} onclickSquarre={()=>{handleSquareClick(6)}}/>
+
+<Square value={squares[7]} onclickSquarre={()=>{handleSquareClick(7)}}/>
+
+<Square value={squares[8]} onclickSquarre={()=>{handleSquareClick(8)}}/>
+
+</div>
+
+
+</div>
 )
 
 
