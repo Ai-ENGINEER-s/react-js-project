@@ -139,3 +139,44 @@ const firstThreegame = fruitsTictactoegame.slice(0, 3);
 
 console.log(firstThreegame)
 
+
+
+
+console.log("test fonction ")
+
+
+function calculateWinner(squares) {
+    // Définition des lignes gagnantes
+    const lines = [
+      [0, 1, 2], 
+      [3, 4, 5], 
+      [6, 7, 8], 
+      [0, 3, 6], 
+      [1, 4, 7], 
+      [2, 5, 8], 
+      [0, 4, 8], 
+      [2, 4, 6]
+    ];
+    
+    for (let i = 0; i < lines.length; i++) {
+      const [a, b, c] = lines[i];
+      const values = [squares[a], squares[b], squares[c]]; // Récupère les valeurs de la ligne gagnante
+  
+      // Vérifie si toutes les valeurs sont identiques et non nulles
+      if (values[0] && values.every(value => value === values[0])) {
+        return values[0]; // Retourne la valeur gagnante ('X' ou 'O')
+      }
+    }
+    return null; // Aucun gagnant
+  }
+  
+  // Exemple de tableau
+  const squares = [
+    "X", "X", "X", 
+    "O", "O", null,
+    "X", "O", "X"   
+  ];
+  
+  const status = calculateWinner(squares);
+  console.log("Voici le gagnant du jeu : " + status); // Affiche 'X'
+  

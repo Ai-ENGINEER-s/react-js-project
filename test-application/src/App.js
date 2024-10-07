@@ -12,44 +12,55 @@ function Square({value , onclickSquarre}){
 }
 
 
+function calculateWinner(squares) {
+  // Définition des lignes gagnantes
+  const lines = [
+    [0, 1, 2], 
+    [3, 4, 5], 
+    [6, 7, 8], 
+    [0, 3, 6], 
+    [1, 4, 7], 
+    [2, 5, 8], 
+    [0, 4, 8], 
+    [2, 4, 6]
+  ];
+  
+  for (let i = 0; i < lines.length; i++) {
+    const [a, b, c] = lines[i];
+    const values = [squares[a], squares[b], squares[c]]; // Récupère les valeurs de la ligne gagnante
 
-
-function calculateWinner(squares){
-
-const boardSquares = [
-[0,1,2], [3,4,5] , [6,7,8], 
-[0,3,6],[1,4,7], [2,5,8],[0,4,8],[2,4,6]
-
-]
-
-
-
-for (let i =0; i<boardSquares.length ; i++){
-for(let j=0 ; j<2 ; j++){
-
-  if(boardSquares[i][j] === boardSquares[i+1][j+1]){
-    return [j]; 
-  }else {
-    return null; 
+    // Vérifie si toutes les valeurs sont identiques et non nulles
+    if (values[0] && values.every(value => value === values[0])) {
+      return values[0]; // Retourne la valeur gagnante ('X' ou 'O')
+    }
   }
-}
-
-
-}
-
+  return null; // Aucun gagnant
 }
 
 
 function Board(){
 
-  const [squares  , setSquares] = useState(Array(9).fill(null))
- const [checkBoxSquare , setCheckBoxSquare] = useState(true)
+
+
+
+
+
+const [squares  , setSquares] = useState(Array(9).fill(null))
+
+
+
+const [checkBoxSquare , setCheckBoxSquare] = useState(true)
 
 
 const copySquares = squares.slice()
-
+let winner   = calculateWinner(squares); 
+let status ; 
 function handleSquareClick(i){
-  if(squares[i]){return ;}
+ 
+   if (winner){
+    status = winner + " a gagné le jeu "
+   }
+  if(squares[i] || winner){return ;}
  copySquares[i] = checkBoxSquare ? "X" : "O"
 
  setSquares(copySquares) 
@@ -60,12 +71,11 @@ function handleSquareClick(i){
 
 
 
-
-  
 return (
 <div>
-
+{status}
 <div className='board-row'>
+
 <Square value={squares[0]} onclickSquarre={()=>{handleSquareClick(0)}}/>
 
 <Square value={squares[1]} onclickSquarre={()=>{handleSquareClick(1)}}/>
@@ -98,7 +108,6 @@ return (
 
 
 }
-
 
 export default function App(){
 
