@@ -42,13 +42,17 @@ return null;
 
 
 function Board() {
-  const [squares, setSquares] = useState(Array(9).fill(null));
-  const [checkBoxSquare, setCheckBoxSquare] = useState(true);
+const [squares, setSquares] = useState(Array(9).fill(null));
+const [checkBoxSquare, setCheckBoxSquare] = useState(0);
+const [move , setMove] = useState(0)
+const [history , setHistory] = useState([squares])
+
+const xIsNext  = checkBoxSquare % 2 === 0  ? "X" : " O"
 
 
-  
 
-  const checker = calculateWinner(squares)
+
+const checker = calculateWinner(squares)
 
   const decisionMaker = checker ? checker + " a gagné le jeu" : "prochain tour " + (checkBoxSquare ? "X" : "O")
 
@@ -60,9 +64,10 @@ function Board() {
 
     // Créer une copie du tableau des cases
     const copySquares = squares.slice();
-    copySquares[i] = checkBoxSquare ? "X" : "O";
+    copySquares[i] = xIsNext
     setSquares(copySquares);
     setCheckBoxSquare(!checkBoxSquare);
+    setMove(move+1)
   }
 
   return (
