@@ -33,9 +33,7 @@ const [a , b , c ] = lines[i] ;
  // [a , b , c] = lines[0] => [a , b , c ] = [0,1,2] = > a = 0 , b= 1 c = 2
 if(squares[a]&&squares[a] === squares[b]&&squares[a] ===squares[c])
 
-return [a]
-
-
+return [a]; 
 }
 return null; 
 
@@ -46,10 +44,9 @@ return null;
 function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [checkBoxSquare, setCheckBoxSquare] = useState(true);
+
+
   
-  // Calculer le gagnant à chaque rendu
-  // const winner = calculateWinner(squares);
-  // const status = winner ? winner + " a gagné le jeu" : "Prochain joueur : " + (checkBoxSquare ? "X" : "O");
 
   const checker = calculateWinner(squares)
 
@@ -93,3 +90,41 @@ function Board() {
 export default function App() {
   return <Board />;
 }
+
+
+
+/*
+
+function Game(){
+
+const [history , setHistory]= useState([Array(9).fill(null)])
+
+const [currentMove , setCurrentMove] = useState(0);
+
+const xIsNext = currentMove % 2 === 0 ; 
+
+const currentSquares = history[currentMove]
+
+function handleClick(i){
+
+const nextHistory = history.slice(0, currentMove +1)
+
+const currentSquares =  nextHistory[nextHistory.length - 1] ; 
+const nextSquares = currentSquares.slice(); 
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+*/
