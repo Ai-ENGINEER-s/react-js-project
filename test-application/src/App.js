@@ -92,39 +92,3 @@ export default function App() {
 }
 
 
-
-/*
-
-function Game(){
-
-const [history , setHistory]= useState([Array(9).fill(null)])
-
-const [currentMove , setCurrentMove] = useState(0);
-
-const xIsNext = currentMove % 2 === 0 ; 
-
-const currentSquares = history[currentMove]
-
-function handleClick(i){
-
-const nextHistory = history.slice(0, currentMove +1)
-
-const currentSquares =  nextHistory[nextHistory.length - 1] ; 
-const nextSquares = currentSquares.slice(); 
-
-
-}
-
-
-
-}
-
-
-
-
-
-
-
-
-
-*/

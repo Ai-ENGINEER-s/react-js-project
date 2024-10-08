@@ -180,3 +180,131 @@ function calculateWinner(squares) {
   const status = calculateWinner(squares);
   console.log("Voici le gagnant du jeu : " + status); // Affiche 'X'
   
+
+
+// Exercice Map 
+
+// exercice N1 
+
+const etudiants = [
+
+    {nom : "BARRY" , note : 85} , 
+    {nom : "Sankara" , note : 90} ,
+    {nom : "Ouedraogo" , note : 95} ,
+    {nom : "Traore" , note : 70} ,
+]
+
+
+const nomsEtudiants = etudiants.map(etudiant => etudiant.nom)
+
+
+console.log("voici les noms des etudiants : " + nomsEtudiants)
+
+
+const ajouter10Points = etudiants.map(etudiant=>etudiant.note+10)
+
+console.log("voici les notes des etudiants avec +10 : " + ajouter10Points)
+
+
+
+// Exercices avec la fonction map dans JavaScript 
+
+
+// Exercice 1 : Transformation d'objets complexes 
+
+const produits = [
+
+{nom : "chaise" , prix : 25 , quantité : 4},
+
+{nom : "Tableau" , prix : 100, quantité : 12}, 
+
+{nom : "Telephone" , prix : 2500, quantité : 100}
+]
+
+
+const produitsAvecPrixtotalNoms = produits.map( function(produit){
+  return (
+     produit.nom + ":"  +  produit.prix * produit.quantité 
+  
+  )
+}
+
+)
+
+console.log( "Exercice 1 :" +"\nproduits prix total et noms : " + produitsAvecPrixtotalNoms)
+
+
+
+// exercice 2 
+
+
+
+const evenements = [
+    { nom: "Conférence", date: new Date(2024, 10, 7) },
+    { nom: "Webinaire", date: new Date(2024, 11, 15) },
+    { nom: "Workshop", date: new Date(2024, 9, 30) }
+  ];
+
+  const evenementsDatesFormatées = evenements.map(function(evenement){
+
+    return (
+
+        evenement.date.getDay() + "-" +`${evenement.date.getMonth()}` + "-" +`${evenement.date.getFullYear()}`
+
+       
+    )
+  })
+
+
+  console.log("voici les dates formatées : " + evenementsDatesFormatées)
+
+
+// exercice 3 
+
+
+const utilisateurs = [
+    { id: 1, nom: "John", email: "john@example.com", age: 25, pays: "France" },
+    { id: 2, nom: "Jane", email: "jane@example.com", age: 28, pays: "Canada" },
+    { id: 3, nom: "Tom", email: "tom@example.com", age: 30, pays: "USA" }
+  ];
+
+
+  const nomsAdressdEmail = utilisateurs.map(function(utilisateur){
+ return    "Nom : " + utilisateur.nom +  "  "  + "Email:" + utilisateur.email
+  } )
+
+  console.log(nomsAdressdEmail)
+
+
+
+  // Exercice 4 
+
+
+  const articles = [
+    { title: "Introduction to JavaScript", body: "Lorem ipsum...", author: "Alice" },
+    { title: "Advanced React", body: "Lorem ipsum...", author: "Bob" },
+    { title: "Mastering CSS", body: "Lorem ipsum...", author: "Charlie" }
+  ];
+
+  const titlesOfArticles = articles.map(article=>article.title)
+
+
+  console.log("Voici les titres des articles " + [titlesOfArticles ])
+
+
+  // Exercice 5 
+
+
+
+  const employés = [
+    { nom: "Luc", salaire: 50, heuresTravaillées: 160 },
+    { nom: "Marie", salaire: 60, heuresTravaillées: 170 },
+    { nom: "Paul", salaire: 55, heuresTravaillées: 180 }
+  ];
+
+  
+
+  const ajoutSalaireTotal = employés.map(employé => employé.salaire* employé.heuresTravaillées)
+
+  salaireTotalListe = employés.fill(ajoutSalaireTotal)
+  console.log("salaires total de chaque employé" + salaireTotalListe)
