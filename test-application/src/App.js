@@ -12,8 +12,7 @@ function Board({ squares, onClick }) {
   return (
     <>
       <div className="board-row">
-        <Square value={squares[0]} onSquareClick={() => onClick(0)} />
-        <Square value={squares[1]} onSquareClick={() => onClick(1)} />
+         <Square value={squares[1]} onSquareClick={() => onClick(1)} />
         <Square value={squares[2]} onSquareClick={() => onClick(2)} />
       </div>
       <div className="board-row">
