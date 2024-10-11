@@ -389,18 +389,14 @@ console.log(moves)
 
 // Exemple 6 
 
-const  books = [
-  { title: 'Le Petit Prince', author: 'Antoine de Saint-Exupéry' },
-  { title: '1984', author: 'George Orwell' },
-  { title: 'Moby Dick', author: 'Herman Melville' },
-];
-const bookList = books.map((book, index) => {
-  const description = `Titre : ${book.title}, Auteur : ${book.author}`;
-  return (
-    <li key={index}>
-      <button onClick={() => alert(description)}>
-        Détails du livre #{index + 1}
-      </button>
-    </li>
-  );
-});
+
+
+
+
+// function de comparaison every 
+
+const engNumbers = [2,1,5,6,8,9]
+
+const allEven = engNumbers.every(num=>num %2===0); 
+
+console.log(allEven)
