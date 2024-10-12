@@ -1,19 +1,45 @@
-import './App.css';
-import {useState , useEffect } from 'react' ; 
+import React from 'react'
+import Movie from './components/Movie'
+import batman from './assets/batman.png' ;
+import './App.css'
+const App = () =>{
 
 
+    return (
+
+        <>
+        
+    <div className='movieRow'>
+
+    <Movie moviePic={batman} movieDescription={"a beautiful movie for kids"} title={"Movie"} />
+
+    <Movie moviePic={batman} movieDescription={"a beautiful movie for kids"} title={"Movie"} />
+
+    <Movie moviePic={batman} movieDescription={"a beautiful movie for kids"} title={"Movie"} />
+    </div>
+
+     <div className='movieRow'>
+
+    <Movie moviePic={batman} movieDescription={"a beautiful movie for kids"} title={"Movie"} />
+
+    <Movie moviePic={batman} movieDescription={"a beautiful movie for kids"} title={"Movie"} />
+    
+    <Movie moviePic={batman} movieDescription={"a beautiful movie for kids"} title={"Movie"} />
+    </div>
 
 
+    <div className='movieRow'>
 
+<Movie moviePic={batman} movieDescription={"a beautiful movie for kids"} title={"Movie"} />
 
- const  App =  ()=>{
+<Movie moviePic={batman} movieDescription={"a beautiful movie for kids"} title={"Movie"} />
 
+<Movie moviePic={batman} movieDescription={"a beautiful movie for kids"} title={"Movie"} />
+</div>
 
-
-  return (
-<button >BARRY</button>
-  )
-
+        
+        </>
+    )
 }
 
 export default App 
