@@ -4,8 +4,10 @@ import player1 from '../assets/player1.png';
 import player2 from '../assets/player2.png';
 
 function Square({ value, clickOnSquare }) {
+  const className = `square ${value === 'X' ? 'x' : value === 'O' ? 'o' : ''}`;
+
   return (
-    <button className='square' onClick={clickOnSquare}>
+    <button className={className} onClick={clickOnSquare}>
       {value}
     </button>
   );
@@ -59,21 +61,28 @@ export default function SquareScope() {
     return null;
   }
 
-  return (
-    <div className='containerScope'>
-      <div className='player'>
-        <img src={player2} alt='Player 2' />
-      </div>
+  const winner = calculateWinner(currentSquares);
 
-      <div className='scopeSquareContainer'>
-        <div className='squareContainer'>
-          <Board value={currentSquares} handleBoardState={handleClickSquare} />
+  const status = winner ? 'Winner: ' + winner : 'Next player: ' + (currentMove % 2 === 0 ? 'X' : 'O');
+
+  return (
+    <>
+      <h4 className='winner'>{status}</h4>
+      <div className='containerScope'>
+        <div className='player'>
+          <img src={player2} alt='Player 2' className='player' />
+        </div>
+
+        <div className='scopeSquareContainer'>
+          <div className='squareContainer'>
+            <Board value={currentSquares} handleBoardState={handleClickSquare} />
+          </div>
+        </div>
+
+        <div className='player'>
+          <img src={player1} alt='Player 1' />
         </div>
       </div>
-
-      <div className='player'>
-        <img src={player1} alt='Player 1' />
-      </div>
-    </div>
+    </>
   );
 }

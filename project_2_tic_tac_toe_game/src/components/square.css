@@ -50,7 +50,6 @@
     justify-content: center;
     align-items: center;
     font-size: 24px;
-    background-color:rgb(235, 203, 164);
     border: 2px solid #ddd;
     border-radius: 10px;
     transition: all 0.3s ease;
@@ -63,7 +62,7 @@
   }
   
   .square.x {
-    color:coral;
+
     font-weight: bold;
   }
   
@@ -95,3 +94,7 @@
     }
   }
   
+
+  .winner{
+    text-align: center;
+  }
