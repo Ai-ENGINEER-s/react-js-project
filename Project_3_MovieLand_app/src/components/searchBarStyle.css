@@ -1,0 +1,30 @@
+.searchBar{
+
+
+ background-color: grey;
+  border-style: none;
+
+  border: none;
+  outline: none;
+  color: white;
+font-size: 20px;
+   
+}
+
+.searchBarDiv{
+    display: flex;
+  justify-content: center;
+    background-color:grey;
+    border-radius: 30px;
+    margin: 30px;
+    width: 60%;
+   height: 60px;
+   color :white ;
+   font-size: bold;
+}
+
+input::placeholder{
+    color: white;
+    size: 30px;
+    font-size: bold;
+}
