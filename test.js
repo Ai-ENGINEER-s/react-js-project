@@ -406,3 +406,27 @@ console.log(allEven)
 const movieApiKey = 'http://www.omdbapi.com/?i=tt3896198&apikey=1c1bff86' ; 
 
 
+
+// implementation de await 
+
+
+
+async function fetMyData(url){
+
+try{
+
+const dataFetch = await fetch(url)
+
+const data =  await dataFetch.json()
+
+
+}
+catch (error){
+
+ console.log("une erreur est survenue " + error)
+}
+
+
+
+
+}
