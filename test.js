@@ -400,3 +400,9 @@ const engNumbers = [2,1,5,6,8,9]
 const allEven = engNumbers.every(num=>num %2===0); 
 
 console.log(allEven)
+
+
+
+const movieApiKey = 'http://www.omdbapi.com/?i=tt3896198&apikey=1c1bff86' ; 
+
+
