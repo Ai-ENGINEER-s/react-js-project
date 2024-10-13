@@ -1,52 +1,36 @@
 import React from 'react'
-import Movie from './components/Movie'
-import batman from './assets/batman.png' ;
 
-import SearchBar  from './components/SearchBar';
-import './App.css'
+
+
+
+
+
+
+
+
+
 const App = () =>{
 
+// so we want to fetch movie data from OMDB Api 
 
-    return (
-
-        <>
-        
-    <div className='fullMovieApp'>
-<SearchBar></SearchBar>
-    <div className='movieRow'>
-
-<Movie moviePic={batman} movieDescription={"a beautiful movie for kids"} title={"Movie"} />
-
-<Movie moviePic={batman} movieDescription={"a beautiful movie for kids"} title={"Movie"} />
-
-<Movie moviePic={batman} movieDescription={"a beautiful movie for kids"} title={"Movie"} />
-</div>
-
- <div className='movieRow'>
-
-<Movie moviePic={batman} movieDescription={"a beautiful movie for kids"} title={"Movie"} />
-
-<Movie moviePic={batman} movieDescription={"a beautiful movie for kids"} title={"Movie"} />
-
-<Movie moviePic={batman} movieDescription={"a beautiful movie for kids"} title={"Movie"} />
-</div>
+// and we are going to use useEffect hook from React   
 
 
-<div className='movieRow'>
 
-<Movie moviePic={batman} movieDescription={"a beautiful movie for kids"} title={"Movie"} />
+    const Key = '1c1bff86'
+    const movieApiKey = 'http://www.omdbapi.com/?i=tt3896198&apikey=1c1bff86' ; 
 
-<Movie moviePic={batman} movieDescription={"a beautiful movie for kids"} title={"Movie"} />
-
-<Movie moviePic={batman} movieDescription={"a beautiful movie for kids"} title={"Movie"} />
-</div>
+return (
 
 
-    </div>
+    <>
+    
+    </>
+)
 
-        
-        </>
-    )
+
+
 }
 
-export default App 
+
+export default App ;  
