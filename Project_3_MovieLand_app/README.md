@@ -10,7 +10,7 @@ MovieLand is a React-based movie search application that fetches movie data from
 
 ## Screenshots
 
-!['movieLand ScreenShot']('./asset/movieLandScreenShot.png')
+!['movieLand ScreenShot']('Project_3_MovieLand_app/src/assets/movieLandScreenShot.png')
 <!-- Add screenshots if available -->
 
 ## Installation
