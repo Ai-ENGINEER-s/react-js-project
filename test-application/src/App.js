@@ -2,8 +2,25 @@
 
     import {useState , useEffect} from 'react'
 
-    import MovieCard  from "./components/MovieCard";
+    
    import Search from './search.svg' ; 
+
+
+
+   const MovieCard = ({movie})=>{
+
+
+    return (
+<div className="movieCard">
+
+<h2>{movie.Title}</h2>
+<h6>{movie.Type}</h6>
+<img src={movie.Poster !== 'N/A' ? movie.Poster :'https://via.placeholder.com/400'} alt={movie.Title}></img>
+<h5>{movie.Year}</h5>
+</div>
+ 
+    )
+}
 
     export default function App()
       {
@@ -12,7 +29,7 @@
    
     const [realMovies , setMovies] = useState([]);    
 
-
+    const [searchMovie ,setSearchMovie] = useState('')
 
 
         const movieApiKey = 'http://www.omdbapi.com/?i=tt3896198&apikey=1c1bff86' ;  
@@ -25,7 +42,8 @@
 
                 const   movieData = await  response.json() ;
 
-                setMovies(movieData.Search)
+                setMovies(movieData.Search); 
+                console.log(movieData.Search)
                 } 
 
             catch (error){
@@ -38,12 +56,18 @@
 
 
           
-    moviesFetching()
-
-      } , [])
+   
+      
     }
 
-      
+    useEffect(()=>{
+
+      moviesFetching('spiderman')
+
+    }, [])
+
+
+
 
 
 
@@ -51,34 +75,31 @@
 
     
 
-           
-        
+         
      
 
-  const myMovie = realMovies.map(movie => movie) ; 
-  console.log('voici votre film : ' , myMovie) ; 
-
+  
     return (
 
 
       <div>
     <div className="searchBar">
     
-    <input className="inputClass">
+    <input className="inputClass"  value={searchMovie} onChange={(e)=>{setSearchMovie(e.target.value)}}>
     
     </input>
     
     <img src={Search} alt='search'
     className="searchImage"
     
-    onClick={()=>{moviesFetching()}}/>
+    onClick={()=>{moviesFetching(searchMovie)}}/>
     </div>
     
     <div className='movieCard'>
         
-          {realMovies.length > 0 ? (
+          {realMovies  ? (
             realMovies.map(movie => (
-              <MovieCard key={movie.imdbID} movie={movie}  />
+              <MovieCard movie ={movie}  />
             ))
           ) : (
             <div className="empty"><h2>No movies found</h2></div>
