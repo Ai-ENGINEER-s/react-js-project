@@ -1,15 +1,16 @@
-.square{
+.movieCard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Crée trois colonnes de largeur égale */
+  gap: 1rem; /* Espace entre les éléments */
 
-  width: 30px;
-  height: 30px;
+  padding: 1rem; /* Ajoute du padding autour des éléments */
   margin: 10px;
-  padding: 15px;
+  gap: 1.5rem;
 }
 
-.board{
-  background-color: antiquewhite;
+.movieCard{
 
-  display:grid;
-  justify-content: center;
-
+  background-color: black;
+  color: white;
+  margin: 10px;
 }
