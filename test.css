@@ -1,0 +1,55 @@
+p:hover{
+
+    color:green ;
+}
+p{
+display: flex;
+justify-content: center;
+width: 200px;
+  padding: 10px;
+  border: 5px solid black;
+  border-color: brown;
+  margin: 20px;
+  text-decoration: dotted;
+}
+
+
+.parent{
+
+
+    font-size: 20px;
+}
+
+
+.child{
+
+    font-size: 1.5em; /* Taille = 1.5 * 20px */
+
+}
+
+.another-child {
+
+    font-size: 1.5rem; /* Taille = 1.5 *16px */
+}
+
+.container {
+    display:flex;
+    justify-content:space-evenly; 
+    /* Espace entre les éléments */
+    align-items:center; 
+    /* Aligne verticalement les éléments */
+    height: 200px;
+    background-color: lightblue;
+    gap: 15px;
+  }
+  
+  .box {
+
+    width: 100px;
+    height: 100px;
+    color: aliceblue;
+    background-color:green;
+
+
+  }
+  
