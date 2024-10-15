@@ -1,0 +1,40 @@
+.searchBar{
+
+    background-color: antiquewhite;
+    border-radius: 30px;
+    display: flex ;
+    height: 50px;
+    margin: 30px;
+    width: 60%;
+    justify-content:space-around;
+    box-shadow:red;
+    border :none ; 
+    outline: none ;
+}
+
+.searchContent {
+
+    background-color: antiquewhite;
+    border-radius: 30px;
+    display: flex ;
+    height: 50px;
+    margin: 30px;
+    width: 60%;
+    justify-content:space-around;
+    box-shadow:red;
+}
+
+.searchImage{
+
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.inputClass{
+
+    
+    border: none;
+    outline: none;
+    
+}
